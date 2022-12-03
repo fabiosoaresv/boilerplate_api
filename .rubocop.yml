@@ -1,0 +1,26 @@
+AllCops:
+  Exclude:
+    - 'config/initializers/sidekiq.rb'
+    - 'db/seeds.rb'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'bin/bundle'
+    - 'config/initializers/devise.rb'
+
+Style/Encoding:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 99
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/PerceivedComplexity:
+  Max: 20

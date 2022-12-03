@@ -8,5 +8,7 @@ docker-compose run -e "RAILS_ENV=test" web bundle exec rspec spec/controllers/ve
 
 docker-compose run -e "RAILS_ENV=test" web rails c
 
-- rubocop
+docker-compose run -e "RAILS_ENV=test" web rubocop
+
+rubocop -A
 - jwt
