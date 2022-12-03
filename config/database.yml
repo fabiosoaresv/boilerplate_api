@@ -5,8 +5,7 @@ development:
   username: postgres
   password: postgres
   database: boilerplate_api_test
-  #host: db
-  host: localhost
+  host: db
   port: 5432
 
 test:
@@ -16,6 +15,5 @@ test:
   username: postgres
   password: postgres
   database: boilerplate_api_test
-  #host: db
-  host: localhost
+  host: db
   port: 5432

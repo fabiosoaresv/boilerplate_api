@@ -20,6 +20,7 @@ group :development, :test do
   gem 'letter_opener'
   gem 'rubocop-rails'
   gem 'rspec-rails'
+  gem 'rspec-sidekiq'
   gem 'factory_bot_rails'
   gem 'faker'
 end

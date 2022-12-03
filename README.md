@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RAILS_ENV=test docker-compose up --build
+docker-compose run -e "RAILS_ENV=test" web bundle exec rspec
 
-Things you may want to cover:
+docker-compose run -e "RAILS_ENV=test" web bundle exec rspec spec/controllers/versions_controller_spec.rb
 
-* Ruby version
 
-* System dependencies
+docker-compose run -e "RAILS_ENV=test" web rails c
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- rubocop
+- jwt
