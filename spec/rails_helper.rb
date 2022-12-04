@@ -21,3 +21,4 @@ end
 
 ActiveJob::Base.queue_adapter = :test
 ActiveJob::Base.queue_adapter.perform_enqueued_jobs = true
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }

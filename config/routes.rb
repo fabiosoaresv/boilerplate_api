@@ -6,4 +6,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'version', to: 'versions#show'
+
+  scope :user do
+    post '', to: 'users#create'
+    get '/:id', to: 'users#show'
+    put '/:id', to: 'users#update'
+    delete '/:id', to: 'users#destroy'
+  end
+
 end
