@@ -3,15 +3,12 @@
 Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
-  devise_for :users
+
+  devise_for :users,
+             controllers: {
+                 sessions: 'users/sessions',
+                 registrations: 'users/registrations'
+             }
 
   get 'version', to: 'versions#show'
-
-  scope :user do
-    post '', to: 'users#create'
-    get '/:id', to: 'users#show'
-    put '/:id', to: 'users#update'
-    delete '/:id', to: 'users#destroy'
-  end
-
 end

@@ -4,12 +4,33 @@ info:
   title: API V1
   version: v1
 paths:
+  "/users":
+    post:
+      summary: Sign up new user
+      parameters: []
+      responses:
+        '200':
+          description: Create a new user with successfully
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    password:
+                      type: string
+        required: true
   "/version":
     get:
       summary: Get actual version
       responses:
         '200':
-          description: With this request you could to get the last version of application
+          description: Get actual version with successfully
 servers:
 - url: http://{defaultHost}
   variables:

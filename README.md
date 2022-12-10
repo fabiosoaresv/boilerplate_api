@@ -44,3 +44,7 @@ $ docker-compose run -e "RAILS_ENV=test" web rails g rspec:swagger versions
 $ docker-compose run -e "RAILS_ENV=test" web rake rswag:specs:swaggerize
 ```
 Note: check the generate files and if necessary update something manually
+
+#### References
+https://betterprogramming.pub/documenting-ruby-on-rails-apis-using-rswag-gem-48c92e11ea30
+https://medium.com/ruby-daily/a-devise-jwt-tutorial-for-authenticating-users-in-ruby-on-rails-ca214898318e
