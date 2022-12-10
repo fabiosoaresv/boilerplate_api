@@ -31,3 +31,16 @@ $ docker-compose run -e "RAILS_ENV=test" web rubocop
 ```console
 $ docker-compose run -e "RAILS_ENV=test" web rubocop -A
 ```
+
+
+### Update documentation on Swagger
+#### Generate your new documentation:
+```console
+$ docker-compose run -e "RAILS_ENV=test" web rails g rspec:swagger versions
+```
+
+#### Run the rake to update yaml
+```console
+$ docker-compose run -e "RAILS_ENV=test" web rake rswag:specs:swaggerize
+```
+Note: check the generate files and if necessary update something manually
